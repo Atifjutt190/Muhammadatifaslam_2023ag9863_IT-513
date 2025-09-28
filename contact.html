@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form action="#" method="post">
+
+        <!-- Contact Information Fieldset -->
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="phone">Phone Number:</label><br />
+            <input type="tel" id="phone" name="phone" pattern="[+0-9\s\-()]{7,}" placeholder="+92 328792556" /><br /><br />
+
+            <label for="city">City:</label><br />
+            <input list="cities" id="city" name="city" placeholder="Select or type your city" />
+            <datalist id="cities">
+                <option value="New York"></option>
+                <option value="Los Angeles"></option>
+                <option value="Chicago"></option>
+                <option value="Houston"></option>
+                <option value="Miami"></option>
+            </datalist>
+        </fieldset>
+
+        <br />
+
+        <!-- Message Fieldset -->
+        <fieldset>
+            <legend>Your Message</legend>
+
+            <label for="subject">Subject:</label><br />
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+            </select><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message here..." required></textarea>
+        </fieldset>
+
+        <br />
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</body>
+</html>
